@@ -1,7 +1,7 @@
 # multi_robot_spawn_gazebo
 This repository contains Python scripts and launch files to spawn multiple robots (turtlebots) in a predefined formation in a Gazebo world. 
 
-<img src="results/three_lines_spawn_30.gif" alt="Three Lines" width="300">
+<img src="results/three_lines_spawn_30.gif" alt="Three Lines" width="700">
 
 
 ## Application
@@ -64,11 +64,11 @@ In the current setup, one robot is used to generate a reference map. This is det
 <table>
   <tr>
     <td>
-      <img src="results/circle_map_5.png" alt="Circle" width="300">
+      <img src="results/circle_map_5.png" alt="Circle" width="350">
       <p>Circle Formation</p>
     </td>
     <td>
-      <img src="results/line_map_5.png" alt="Line" width="300">
+      <img src="results/line_map_5.png" alt="Line" width="350">
       <p>Line Formation</p>
     </td>
   </tr>
@@ -78,7 +78,7 @@ From the above, we can see that this method of mapping is not ideal as it is lim
 
 Here's the tf tree for 2 robots:
 
-<img src="results/frames.svg" alt="Three Lines" width="300">
+<img src="results/frames.svg" alt="Three Lines" width="970">
 
 
 ### Formation
@@ -91,21 +91,21 @@ The formation of the robots can be customized by modifying the `distribution_typ
 <table>
   <tr>
     <td>
-      <img src="results/circle_15.png" alt="Circle" width="300">
+      <img src="results/circle_15.png" alt="Circle" width="350">
       <p>Circle Formation</p>
     </td>
     <td>
-      <img src="results/line_15.png" alt="Line" width="300">
+      <img src="results/line_15.png" alt="Line" width="350">
       <p>Line Formation</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="results/two_lines_15.png" alt="Two Lines" width="300">
+      <img src="results/two_lines_15.png" alt="Two Lines" width="350">
       <p>Two-line Formation</p>
     </td>
     <td>
-      <img src="results/three_lines_15.png" alt="Three Lines" width="300">
+      <img src="results/three_lines_15.png" alt="Three Lines" width="350">
       <p>Three-line Formation</p>
     </td>
   </tr>
@@ -131,9 +131,3 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 - [Moses Ebere](https://github.com/MosesEbere)
 - [Joseph Adeola](https://github.com/AdeolaJoseph)
-
-<!-- **License:** This project is licensed under the [MIT License](LICENSE). -->
-
-
-<!-- **License:** This project is licensed under the [MIT License](LICENSE). -->
-
