@@ -40,7 +40,7 @@ To use the scripts and launch files in this repository, follow the steps below:
     ```
 4. Launch the multi-robot spawn launch file to spawn the robots in Gazebo:
     ```bash
-    roslaunch gazebo_multi_robot_spawn robot_spawn_coordinator.launch
+    roslaunch gazebo_multi_robot_spawn gazebo_robots.launch
     ```
 5. The robots will be spawned in Gazebo in the predefined formation.
 
