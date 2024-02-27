@@ -27,7 +27,7 @@ To use the scripts and launch files in this repository, follow the steps below:
 1. Clone the repository into your catkin workspace:
    ```bash
    cd ~/catkin_ws/src
-   git clone git@github.com:MosesEbere/multi_robot_spawn_gazebo.git
+   git clone git@github.com:MosesEbere/gazebo_multi_robot_spawn.git
     ```
 2. Build the packages in the catkin workspace:
     ```bash
@@ -40,13 +40,13 @@ To use the scripts and launch files in this repository, follow the steps below:
     ```
 4. Launch the multi-robot spawn launch file to spawn the robots in Gazebo:
     ```bash
-    roslaunch multi_robot_spawn_gazebo robot_spawn_coordinator.launch
+    roslaunch gazebo_multi_robot_spawn robot_spawn_coordinator.launch
     ```
 5. The robots will be spawned in Gazebo in the predefined formation.
 
 6. Optionally, you can launch the static transform publisher to publish the static transform between the map and the base_footprint frame of each robot:
     ```bash
-    roslaunch multi_robot_spawn_gazebo static_tf.launch
+    roslaunch gazebo_multi_robot_spawn static_tf.launch
     ```
 
 ## Launch Files
@@ -62,7 +62,7 @@ The following launch files are included in this repository:
 The formation of the robots can be customized by modifying the Python scripts and launch files in the repository. The spawn locations and orientations of the robots can be adjusted to create different formations. The number of robots can also be increased or decreased based on the user's requirements.
 
 ### Number of Robots
-The number of robots to be spawned can be adjusted by modifying the `num_of_robots` entry in the yaml file in the `multi_robot_spawn_gazebo` package. 
+The number of robots to be spawned can be adjusted by modifying the `num_of_robots` entry in the yaml file in the `gazebo_multi_robot_spawn` package. 
 
 ### Mapping
 In the current setup, one robot is used to generate a reference map. This is determined by setting the `ref_robot_id` entry in the `params.yaml` file. This is loaded to the ROS parameter server by `robot_spawn_coordinator.launch` and becomes assessible to the octomap_server via the `laser_scan_to_point_cloud_node.py` node.

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>multi_robot_spawn_gazebo</name>
+  <name>gazebo_multi_robot_spawn</name>
   <version>0.0.0</version>
   <description>A package for spawning multiple robots (turtlebots) in a predefined formation in a Gazebo world. </description>
 

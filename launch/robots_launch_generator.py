@@ -72,7 +72,7 @@ class LaunchFileGenerator:
         self.start_formation_type = self.params.distribution_type
         self.distribution = self.params.distribution_params
         rospack = rospkg.RosPack()
-        package_path = rospack.get_path('multi_robot_spawn_gazebo')  # Replace with your package name
+        package_path = rospack.get_path('gazebo_multi_robot_spawn')  # Replace with your package name
         self.output_file_name = os.path.join(os.path.join(package_path, 'launch'), 'spawn_multi_robot.launch')
 
     @staticmethod
@@ -129,7 +129,7 @@ class LaunchFileGenerator:
 if __name__ == "__main__":
     try:
         rospack = rospkg.RosPack()
-        package_path = rospack.get_path('multi_robot_spawn_gazebo')  # Replace with your package name
+        package_path = rospack.get_path('gazebo_multi_robot_spawn')  # Replace with your package name
         config = {
             "num_of_robots": rospy.get_param('num_of_robots'),
             "robot_model": rospy.get_param('robot_model'),

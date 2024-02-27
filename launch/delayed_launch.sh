@@ -1,3 +1,3 @@
 #!/bin/bash
 sleep $1
-roslaunch multi_robot_spawn_gazebo spawn_multi_robot.launch
+roslaunch gazebo_multi_robot_spawn spawn_multi_robot.launch

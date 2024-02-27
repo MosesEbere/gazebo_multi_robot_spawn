@@ -22,7 +22,7 @@ def ros_node():
     launch_file_name = 'spawn_multi_robot.launch'
     rospack = rospkg.RosPack()
     # use os.path.join to get the path to the launch file dont add / anywhere
-    file_name = os.path.join(os.path.join(rospack.get_path('multi_robot_spawn_gazebo'), 'launch'), launch_file_name)
+    file_name = os.path.join(os.path.join(rospack.get_path('gazebo_multi_robot_spawn'), 'launch'), launch_file_name)
 
     reset_launch_file(file_name)
 
