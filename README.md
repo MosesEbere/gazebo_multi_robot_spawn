@@ -1,7 +1,7 @@
 # Spawning Multiple Robots in Gazebo
 [![ROS](https://img.shields.io/badge/ROS-Noetic%20or%20later-blue.svg)](http://wiki.ros.org/ROS/Installation)
 [![Python](https://img.shields.io/badge/Python-3.7%20or%20later-blue.svg)](https://www.python.org/downloads/)
-[![Gazebo Simulator](https://img.shields.io/badge/Simulator-Gazebo-blue.svg)](http://wiki.ros.org/gazebo_ros_pkgs)
+[![Gazebo Simulator](https://img.shields.io/badge/Simulator-Gazebo-orange.svg)](http://wiki.ros.org/gazebo_ros_pkgs)
 
 <!-- *(Optional)* -->
 
