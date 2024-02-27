@@ -1,0 +1,3 @@
+<launch>
+    <node name="static_transforms" pkg="multi_robot_spawn_gazebo" type="static_tf.py" output="screen"/>
+</launch>

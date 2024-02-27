@@ -1,0 +1,30 @@
+<!-- gazebo_robots.launch -->
+<launch>
+    <param name="/use_sim_time" value="true" />
+    <rosparam file="$(find multi_robot_spawn_gazebo)/params.yaml"/>
+
+    <!-- Launch Gazebo -->
+    <node name="gazebo" pkg="gazebo_ros" type="gazebo" 
+    args="$(find turtlebot3_gazebo)/worlds/turtlebot3_empty_world.world" respawn="false" output="screen" />
+
+    <!-- Launch the Python script to spawn robots -->
+    <node name="gazebo_robot_spawner" pkg="multi_robot_spawn_gazebo" type="robots_launch_generator.py" output="screen" />
+    
+    <node name="delayed_launch" pkg="multi_robot_spawn_gazebo" type="delayed_launch.sh" args="5" output="screen"/>
+
+    <!-- Launch Point cloud node and Octomap Server -->
+    <node pkg="multi_robot_spawn_gazebo" type="laser_scan_to_point_cloud_node.py" name="laserscan_to_pointcloud">
+    </node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap" output="screen">
+        <param name="frame_id" value="world" />
+        <remap to="/laserscan_to_pointcloud/converted_pc" from="/cloud_in"/>
+    </node>
+
+    <!-- This node is required to reset the dynamically generated launch file -->
+    <arg name="node_start_delay" default="15.0" />  
+    <node pkg="multi_robot_spawn_gazebo" type="reset_gazebo_launch.py" name="launch_file_resetter" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+
+    <arg name="node_delay" default="5.0" />  
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find multi_robot_spawn_gazebo)/rviz/vis_hierarchy.rviz" launch-prefix="bash -c 'sleep $(arg node_delay); $0 $@' "/>
+
+</launch>

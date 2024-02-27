@@ -1,0 +1,18 @@
+# number of robots to be spawned
+num_of_robots: 30
+
+# Reference Robot for Octomap
+ref_robot_id: 0 # According to the spawn order
+
+# robot model
+robot_model: 'burger'              # Robot model type [burger, waffle, waffle_pi]
+
+# spawn distribution/formation
+distribution_type: 'three_lines'               # Distribution type: circle, line, two_lines, three_lines
+
+distribution_params: 
+  center_x: 0.0                    # Center X coordinate for the first robot in each line
+  center_y: 0.0                     # Center Y coordinate for the first robot in each line
+  separation: 0.75                  # Distance between robots in the line
+  direction: 'horizontal'           # Direction of the lines ('horizontal' or 'vertical')
+  radius: 0.5                       # Radius of the circle
