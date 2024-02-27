@@ -1,7 +1,8 @@
 # Spawning Multiple Robots in Gazebo
 [![ROS](https://img.shields.io/badge/ROS-Noetic%20or%20later-blue.svg)](http://wiki.ros.org/ROS/Installation)
 [![Python](https://img.shields.io/badge/Python-3.7%20or%20later-blue.svg)](https://www.python.org/downloads/)
-[![Stonefish Simulator](https://img.shields.io/badge/Simulator-Stonefish%20or%20similar-blue.svg)](http://wiki.ros.org/turtlebot3_simulations)
+[![Gazebo Simulator](https://img.shields.io/badge/Simulator-Gazebo%20or%20similar-blue.svg)](http://wiki.ros.org/gazebo_ros_pkgs)
+
 <!-- *(Optional)* -->
 
 This repository contains Python scripts and launch files to spawn multiple robots (turtlebots) in a predefined formation in a Gazebo world. 
