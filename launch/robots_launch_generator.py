@@ -45,17 +45,8 @@ class LaunchFileGenerator:
     __init__(self, params: LaunchParams):
         Initializes the LaunchFileGenerator with parameters from a LaunchParams instance.
 
-    read_params_from_yaml(yaml_file: str) -> LaunchParams:
-        Reads parameters from a YAML file and returns a LaunchParams instance.
-
-    distribute_three_lines(self, k: int, n: int, center_x=0, center_y=0, separation=1, direction='horizontal') -> tuple:
-        Distributes robots in three lines. The robots are distributed as evenly as possible across the three lines.
-
-    distribute_two_lines(self, k: int, n: int, center_x=0, center_y=0, separation=1, direction='horizontal') -> tuple:
-
-    distribute_circle(self, k: int, n: int, center_x=0, center_y=0, radius=1) -> tuple:
-
-    distribute_line(self, k: int, n: int, center_x=0, center_y=0, separation=0.5, direction='horizontal') -> tuple:
+    load_params(config: dict) -> LaunchParams:
+        Reads parameters from a dictionary and returns a LaunchParams instance.
 
     generate_launch_file(self):
         Generates a launch file for spawning robots in Gazebo.
@@ -129,7 +120,7 @@ class LaunchFileGenerator:
 if __name__ == "__main__":
     try:
         rospack = rospkg.RosPack()
-        package_path = rospack.get_path('gazebo_multi_robot_spawn')  # Replace with your package name
+        package_path = rospack.get_path('gazebo_multi_robot_spawn')  # Replace with new package name if altered. 
         config = {
             "num_of_robots": rospy.get_param('num_of_robots'),
             "robot_model": rospy.get_param('robot_model'),
