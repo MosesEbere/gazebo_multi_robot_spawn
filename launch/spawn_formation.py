@@ -1,3 +1,7 @@
+"""
+Adapted and extended from: https://github.com/larics/sphero_simulation/tree/master/sphero_stage
+"""
+
 import math
 
 class Formation:
